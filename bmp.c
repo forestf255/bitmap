@@ -626,7 +626,7 @@ static int bm_save_jpg(Bitmap *b, const char *fname);
 int bm_save(Bitmap *b, const char *fname) {
     /* Chooses the file type to save as based on the
     extension in the filename */
-    char *lname = _strdup(fname), *c,
+    char *lname = strdup(fname), *c,
         jpg = 0, png = 0, pcx = 0, gif = 0, tga = 0;
     for(c = lname; *c; c++)
         *c = tolower(*c);
